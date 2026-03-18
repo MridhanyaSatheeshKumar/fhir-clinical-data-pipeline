@@ -30,3 +30,10 @@ model.fit(X_train,y_train)
 preds = model.predict(X_test)
 
 print(classification_report(y_test,preds))
+
+
+import joblib
+
+joblib.dump(model, "modeling/glycemic_risk_model.pkl")
+
+print("Model saved to modeling/glycemic_risk_model.pkl")
