@@ -315,6 +315,86 @@ Reflect clinical data curation practices
 
 This reflects biomedical data engineering practices where quality validation is required before downstream analytics.
 
+# Knowledge Graph Layer
+
+The pipeline includes a Neo4j knowledge graph representation of clinical patient features.
+
+Clinical features are represented as graph relationships instead of only relational tables.
+
+Example graph relationships:
+
+Patient → HAS_BMI → BMI value
+
+Patient → HAS_TRIGLYCERIDES → Lab value
+
+Patient → HAS_CREATININE → Lab value
+
+## Graph Modeling Strategy
+
+Patient nodes represent individuals.
+
+Biomarker nodes represent clinical measurements.
+
+Edges represent semantic relationships between patients and biomarkers.
+
+## Purpose
+
+Enable semantic relationship modeling
+
+Support biomedical knowledge graph construction
+
+Enable future reasoning workflows
+
+Support graph-based analytics
+
+## Data Quality Handling
+
+Missing biomarker values are excluded during graph construction to prevent invalid node creation and maintain semantic data integrity.
+
+## Technologies Used
+
+Neo4j graph database
+
+Cypher query language
+
+Neo4j Python driver
+
+This reflects modern biomedical informatics systems that use knowledge graphs for semantic integration and clinical relationship modeling.
+
+# RDF Triple Export Layer
+
+The pipeline exports clinical patient features as RDF triples to support semantic web interoperability.
+
+Patient features are modeled as subject–predicate–object triples.
+
+Example:
+
+Patient123 → hasBMI → 25.4
+
+Patient123 → hasTriglycerides → 180
+
+Patient123 → hasCreatinine → 1.1
+
+## Purpose
+
+Enable semantic web integration
+
+Support linked data modeling
+
+Enable SPARQL querying
+
+Support ontology alignment
+
+## Technologies
+
+rdflib Python library
+
+RDF Turtle format
+
+Semantic triple modeling
+
+This reflects biomedical semantic web practices used in research data platforms.
+
 # Summary
 
 This project demonstrates a semantic clinical data engineering workflow involving:

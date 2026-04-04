@@ -20,6 +20,14 @@ echo "Running data quality validation..."
 
 python3 validation/data_quality_checks.py
 
+echo "Building knowledge graph..."
+
+python3 graph/build_knowledge_graph.py
+
+echo "Exporting RDF triples..."
+
+python3 rdf/export_rdf.py
+
 echo "Running ML model..."
 
 python3 modeling/glycemic_risk_model.py
