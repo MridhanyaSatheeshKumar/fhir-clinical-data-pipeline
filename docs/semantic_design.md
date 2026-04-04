@@ -281,27 +281,39 @@ Expert-defined labeling rules
 
 Guideline-based risk classification
 
-# Future Semantic Extensions
+# Data Quality Validation Layer
 
-The pipeline is designed to support future semantic enhancements including:
+The pipeline includes a data quality validation stage to ensure clinical feature integrity before machine learning processing.
 
-Ontology mapping tables
+The validation layer performs:
 
-SNOMED clinical condition integration
+Missing value detection
 
-RxNorm medication mapping
+Clinical outlier detection
 
-Graph database integration
+Negative value detection
 
-RDF triple generation
+Feature completeness checks
 
-Knowledge graph construction
+Example validation checks:
 
-Rule-based reasoning systems
+Glucose > 300 flagged as potential outlier
 
-Semantic data validation frameworks
+BMI > 60 flagged as extreme
 
-These extensions would further align the project with modern biomedical semantic engineering practices.
+Negative biomarker values flagged
+
+## Purpose
+
+Ensure data reliability
+
+Improve model robustness
+
+Enable reproducible research
+
+Reflect clinical data curation practices
+
+This reflects biomedical data engineering practices where quality validation is required before downstream analytics.
 
 # Summary
 

@@ -16,6 +16,10 @@ echo "Exporting feature table..."
 
 sudo -u postgres psql -d fhir_db -c "\COPY patient_features TO 'data/patient_features.csv' CSV HEADER"
 
+echo "Running data quality validation..."
+
+python3 validation/data_quality_checks.py
+
 echo "Running ML model..."
 
 python3 modeling/glycemic_risk_model.py
