@@ -6,11 +6,11 @@ This project implements a semantic clinical data engineering pipeline that integ
 
 The system demonstrates core semantic engineering concepts including:
 
-• Healthcare interoperability using FHIR  
-• Terminology-driven data extraction using LOINC  
-• Clinical data harmonization  
-• Semantic feature engineering  
-• Biomedical data integration workflows  
+• Healthcare interoperability using FHIR
+• Terminology-driven data extraction using LOINC 
+• Clinical data harmonization 
+• Semantic feature engineering
+• Biomedical data integration workflows
 
 The pipeline follows a semantic ETL architecture:
 
@@ -42,10 +42,10 @@ The pipeline enables consistent clinical feature generation across multiple data
 
 The system is designed to allow future integration of additional biomedical ontologies such as:
 
-SNOMED CT  
-RxNorm  
-ICD-10  
-UCUM  
+SNOMED CT
+RxNorm 
+ICD-10 
+UCUM 
 
 ---
 
@@ -74,11 +74,11 @@ Example biomarker mapping:
 
 Using standardized terminology enables:
 
-• Cross-system compatibility  
-• Semantic interoperability  
-• Standardized feature extraction  
-• Reproducible clinical research pipelines  
-• Consistent biomarker definitions  
+• Cross-system compatibility
+• Semantic interoperability
+• Standardized feature extraction
+• Reproducible clinical research pipelines
+• Consistent biomarker definitions
 
 This approach reflects real-world biomedical informatics practices where ontology identifiers serve as canonical references for clinical variables.
 
@@ -97,7 +97,7 @@ Example:
 | P001 | 4548-4 | 5.6 |
 ```
 
-Machine learning systems require structured feature tables.  
+Machine learning systems require structured feature tables.
 The pipeline harmonizes data by transforming long-format clinical observations into wide-format feature matrices.
 
 Example:
@@ -114,15 +114,39 @@ MAX(CASE WHEN loinc_code='2339-0' THEN value END)
 
 ## What this demonstrates
 
-• Semantic normalization  
-• Clinical feature materialization  
-• Data harmonization  
-• ML feature engineering  
-• Clinical research variable construction  
+• Semantic normalization
+• Clinical feature materialization
+• Data harmonization
+• ML feature engineering
+• Clinical research variable construction
 
 This reflects common biomedical data preparation workflows used in translational research environments.
 
 ---
+# Terminology Management Layer
+
+The system includes a terminology mapping table that stores ontology metadata for LOINC biomarkers.
+
+This enables semantic enrichment of clinical observations through ontology joins rather than hard-coded filtering logic.
+
+Example terminology table:
+
+```md
+| loinc_code | concept_name | category |
+|------------|-------------|----------|
+|2339-0|Glucose|Metabolic|
+|4548-4|HbA1c|Diabetes|
+|2571-8|Triglycerides|Lipid|
+```
+
+## Benefits
+
+• Centralized ontology management 
+• Query flexibility 
+• Semantic enrichment 
+• Easier extension to additional ontologies 
+
+This reflects real biomedical data platform practices where terminology services manage clinical concept definitions.
 
 # SQL Semantic Transformation Layer
 

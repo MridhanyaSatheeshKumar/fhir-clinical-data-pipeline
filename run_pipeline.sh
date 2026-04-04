@@ -4,6 +4,10 @@ echo "Starting FHIR ingestion..."
 
 python3 ingestion/fhir_ingest.py
 
+echo "Loading terminology mapping..."
+
+sudo -u postgres psql -d fhir_db -f biomarker_extraction/loinc_terminology.sql
+
 echo "Extracting biomarkers..."
 
 sudo -u postgres psql -d fhir_db -f biomarker_extraction/metabolic_biomarkers.sql
