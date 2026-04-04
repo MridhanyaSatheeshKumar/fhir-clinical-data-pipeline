@@ -1,45 +1,58 @@
-# FHIR Clinical Data Pipeline for Biomarker-Based Glycemic Risk Prediction
+# FHIR Semantic Clinical Data Engineering Pipeline for Glycemic Risk Modeling
 
-This project builds an end-to-end clinical data pipeline using FHIR healthcare data to extract metabolic biomarkers and train a predictive machine learning model for glycemic risk.
+This project implements a semantic clinical data engineering pipeline that integrates healthcare data from FHIR sources, harmonizes clinical observations using LOINC terminology, and generates machine-learning ready clinical feature tables for glycemic risk modeling.
 
-## Pipeline Architecture
+The system demonstrates healthcare interoperability, semantic data normalization, biomedical ontology usage, and clinical feature engineering workflows commonly used in translational biomedical informatics research.
 
-FHIR Clinical Data
-        ↓
-FHIR API ingestion
-        ↓
-PostgreSQL clinical database
-        ↓
-LOINC-based biomarker extraction
-        ↓
-Feature engineering
-        ↓
-Machine learning model for glycemic risk prediction
+# Architecture Diagram
 
-## Technologies
 
-- FHIR clinical interoperability standard
-- PostgreSQL database
-- LOINC biomarker coding
-- Python data pipeline
-- scikit-learn machine learning
+## Key Features
 
-## Project Components
+• FHIR clinical data ingestion (local and SMART FHIR sources)
 
-### 1. Data Ingestion
-FHIR resources are ingested and normalized into a relational clinical database.
+• Ontology-driven biomarker extraction using LOINC codes
 
-### 2. Biomarker Extraction
-Metabolic biomarkers such as glucose, triglycerides, creatinine, and BMI are extracted using LOINC-coded observations.
+• Semantic clinical data harmonization into ML feature tables
 
-### 3. Feature Engineering
-Patient-level feature tables are constructed for modeling.
+• PostgreSQL clinical data warehouse integration
 
-### 4. Predictive Modeling
-A logistic regression model predicts glycemic risk based on metabolic biomarkers.
+• Glycemic risk modeling using clinical biomarkers
 
-## Research Direction
+• Modular biomedical data pipeline design
 
-This project demonstrates a prototype pipeline for:
+## Data Sources
 
-Clinical Data + Biomarkers + AI → Precision Nutrition and Metabolic Risk Prediction
+The pipeline supports multiple clinical data ingestion pathways:
+
+1 Synthetic FHIR data (Synthea bundles)
+
+2 SMART FHIR clinical server integration
+
+3 Structured clinical CSV ingestion (extensible)
+
+This demonstrates integration of heterogeneous biomedical data sources.
+
+## Technologies Used
+
+Python
+FHIR (Fast Healthcare Interoperability Resources)
+LOINC biomedical terminology
+PostgreSQL
+SQL
+scikit-learn
+REST APIs
+Healthcare data modeling
+Neo4j
+RDF
+rdflib
+SPARQL
+
+## Pipeline Workflow
+
+FHIR ingestion
+→ Semantic normalization
+→ Terminology filtering
+→ Clinical feature harmonization
+→ Machine learning modeling
+→ Risk prediction output
