@@ -395,6 +395,37 @@ Semantic triple modeling
 
 This reflects biomedical semantic web practices used in research data platforms.
 
+# Clinical Reasoning Layer
+
+The pipeline includes a rule-based reasoning stage to derive clinical risk indicators from biomarker values.
+
+Clinical rules are based on widely accepted thresholds:
+
+HbA1c > 6.5 → Diabetes risk
+
+Glucose > 126 → Glycemic risk
+
+BMI > 30 → Obesity risk
+
+Triglycerides > 200 → Lipid risk
+
+## Purpose
+
+Enable semantic inference
+
+Provide interpretable risk classification
+
+Support clinical rule modeling
+
+Complement ML predictions
+
+## Why rule-based reasoning matters
+
+Rule-based reasoning allows transparent clinical logic that complements statistical models.
+
+This reflects biomedical informatics workflows where rule engines support clinical decision support systems.
+
+
 # Summary
 
 This project demonstrates a semantic clinical data engineering workflow involving:

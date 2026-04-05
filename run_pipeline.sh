@@ -28,6 +28,10 @@ echo "Exporting RDF triples..."
 
 python3 rdf/export_rdf.py
 
+echo "Running clinical reasoning..."
+
+python3 reasoning/clinical_reasoning.py
+
 echo "Running ML model..."
 
 python3 modeling/glycemic_risk_model.py
