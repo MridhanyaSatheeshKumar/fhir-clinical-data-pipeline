@@ -32,6 +32,10 @@ echo "Running clinical reasoning..."
 
 python3 reasoning/clinical_reasoning.py
 
+echo "Mapping clinical ontology..."
+
+python3 ontology/map_conditions.py
+
 echo "Running ML model..."
 
 python3 modeling/glycemic_risk_model.py

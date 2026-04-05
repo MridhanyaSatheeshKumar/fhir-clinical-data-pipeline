@@ -425,6 +425,33 @@ Rule-based reasoning allows transparent clinical logic that complements statisti
 
 This reflects biomedical informatics workflows where rule engines support clinical decision support systems.
 
+# Clinical Ontology Integration (SNOMED)
+
+The pipeline integrates SNOMED CT concepts to map inferred clinical risks to standardized disease ontology identifiers.
+
+Example mappings:
+
+Glycemic risk → Diabetes Mellitus (SNOMED: 44054006)
+
+Obesity risk → Obesity (SNOMED: 414916001)
+
+Lipid risk → Hyperlipidemia (SNOMED: 55822004)
+
+## Purpose
+
+Enable ontology-backed risk representation
+
+Support semantic disease modeling
+
+Enable future clinical reasoning extensions
+
+Support biomedical data harmonization
+
+## Why SNOMED matters
+
+SNOMED CT provides standardized disease definitions used in clinical research and healthcare systems.
+
+Mapping inferred risks to SNOMED concepts enables interoperability with biomedical knowledge systems.
 
 # Summary
 
